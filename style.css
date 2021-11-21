@@ -1,0 +1,176 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+
+  /* jarak antar baris */
+  line-height: 1.65;
+
+  /* scroll ke bawah */
+  padding-bottom: 1000px;
+}
+
+/* latihan satu */
+.container-satu {
+  /* ukuran container */
+  max-width: 800px;
+
+  /* margin atas bawah 50 px dan kanan kirinya auto */
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  /* supaya img turun */
+  flex-wrap: wrap;
+  /* untuk membagi menjadi kolom */
+  display: flex;
+}
+
+/* latihan 1 */
+.kolom-utama {
+  /* mengatur ukuran kolom/elemen */
+  flex: 3;
+  /* menukar kolom menjadi urutan ke 2 */
+  order: 2;
+  text-align: justify;
+  margin: 10px;
+}
+
+.sidebar-satu {
+  flex: 1;
+  order: 1;
+  text-align: justify;
+  margin: 10px;
+}
+
+.sidebar-dua {
+  flex: 1;
+  order: 3;
+  text-align: justify;
+  margin: 10px;
+}
+
+/* latihan 2 */
+.container-dua {
+  /* max untuk container responsive */
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.layanan {
+  padding: 20px;
+  /* supaya tidak merubah ukuran kotaknya */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.layanan.satu {
+  background-color: rgb(235, 145, 145);
+}
+.layanan.dua {
+  background-color: rgb(148, 148, 238);
+}
+.layanan.tiga {
+  background-color: rgb(159, 248, 159);
+}
+
+/* Latihan 3 */
+.container-tiga {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  /* supaya img turun */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 50%;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+/* latihan 4 */
+.container-empat {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: #eee;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+}
+
+.card .header {
+  height: 150px;
+  background-color: #666;
+}
+
+.card .content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card.besar {
+  /* ukurannya lebih besar dari yang lain */
+  transform: scale(1.12);
+}
+
+/* latihan 5 */
+.container-lima {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+
+.kotak span {
+  margin: auto;
+}
+
+/* responsive */
+
+/* media menentukan kalau lebar layarnya berapa?  mau pakai css yang mana */
+@media (min-width: 600px) {
+  .container-dua {
+    display: flex;
+    /* mengatur elemen 1 atau elemen 3 mepet kanan atau kiri */
+    justify-content: space-between;
+  }
+  .layanan {
+    width: 30%;
+  }
+
+  .thumbnail {
+    width: 25%;
+  }
+  .card {
+    /* kalo ukuran 600px pakai lebar 30% */
+    width: 30%;
+  }
+}
