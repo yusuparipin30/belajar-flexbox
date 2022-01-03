@@ -84,8 +84,16 @@ body {
   max-width: 800px;
   margin: 50px auto;
   display: flex;
-  /* supaya img turun */
+  /* flex - wrap :digunakan untuk mendefinisikan bahwa elemen
+   item di dalam container flexbox tidak harus disejajarkan
+    dalam satu baris. Artinya, elemen item tersebut digulung 
+    (dipindahkan) ke baris baru bila sudah memenuhi lebar container-nya. */
   flex-wrap: wrap;
+  /* justify-content digunakan untuk mensejajarkan
+   item-item diantara flexbox agar container dari 
+   flexbox tersebut bisa mendistribusikan ruang kosong 
+   yang tersisa ketika item flex dalam satu baris tersebut tidak
+   flexsibel atau meskipun flexsibel tapi sudah mencapai batas ukuran maksimum. */
   justify-content: center;
 }
 
@@ -155,7 +163,6 @@ body {
 
 /* responsive */
 
-/* media menentukan kalau lebar layarnya berapa?  mau pakai css yang mana */
 @media (min-width: 600px) {
   .container-dua {
     display: flex;
@@ -170,7 +177,7 @@ body {
     width: 25%;
   }
   .card {
-    /* kalo ukuran 600px pakai lebar 30% */
+    /* ukuran 600px pakai lebar 30% */
     width: 30%;
   }
 }
