@@ -25,7 +25,10 @@ body {
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  /* supaya img turun */
+  /* flex-wrap digunakan untuk mendefinisikan bahwa elemen 
+  item di dalam container flexbox tidak harus disejajarkan
+   dalam satu baris. Artinya, elemen item tersebut 
+  digulung (dipindahkan) ke baris baru bila sudah memenuhi lebar container-nya. */
   flex-wrap: wrap;
   /* untuk membagi menjadi kolom */
   display: flex;
@@ -64,7 +67,9 @@ body {
 
 .layanan {
   padding: 20px;
-  /* supaya tidak merubah ukuran kotaknya */
+  /* box sizing : Box sizing adalah properti yang
+   menerima nilai padding dan border pada suatu elemen termasuk 
+  sebagai nilai total dari width dan height suatu elemen. */
   box-sizing: border-box;
   margin-bottom: 20px;
 }
